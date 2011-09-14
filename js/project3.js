@@ -5,12 +5,13 @@
 
 //variables
 
-var form = true,
-	place = "The Chocolate Exchange",
-	time = 10,
+var place = "The 24 Hour Chocolate Exchange"
+	form = true,
 	money2 = 80,
 	cabRide = 75,
-	counterLady = "Mary",
+	says = function(talking){
+		console.log(talking);
+		};
  
  	otherTypes = {
 	type1: "Orange Revenge",
@@ -19,13 +20,12 @@ var form = true,
 	type4: "Fudge Blast",
 	type5: "Orange Passion",		
 };
-var totalAmount = 80
-	taxiCabRide = 75/3	
+	
 
 //Start//
 	console.log("Today I was looking through one of my kitchen cabinets and found a variety of different types of chocolates. I remember seeing a commercial on television about a place called " + place + ", and thought what a great idea. With all of the different types of chocolates I have, I could go and exchange them for some chocolates I would actually eat. I called Shanna and Crystal and told them about my idea. They both wanted to go with me to " + place + ".");
 
-	console.log(Math.floor(Math.random()*11));
+	
 //Arrival at The Chocolate Exchange//
 		var getTaxiCabRide = function(){
 		var taxiCabRide = 75/3			
@@ -44,24 +44,33 @@ var totalAmount = 80
 			getTaxiCabRide();
 		
 	console.log("Awesome, let\'s go inside.");
-			
-//Inside The Chocolate Exchange//
-	console.log("Hello. My name is " + counterLady + ". How may I help you?");
-	if(time < 12){
-	console.log("Hello. Good Morning.");
-	}else{
-		console.log("Hello. Good Afternoon.");
+
+//Method: Procedure - Inside The Chocolate Exchange//	
+	var store = {
+		place: "The 24 Hour Chocolate Exchange", //property:string
+		counterLady:"Mary",
+		sales: true, //property:boolean
+		storeOpen: function(){
+			says("Hello. My name is " + counterLady + ". How may I help you?");
+			}
+		};
+		if(store.sales == true){
+		says("Good morning. We have a few sales today.");
+		says("Awesome, we\'ll have to check those out.")
+				}else{
+		says("I\'m sorry we don't have any sales today.");
+		says("Oh shucks.");
 	};
-	console.log("I'd like to exchange these chocolates if I could.");
-	console.log("Let's see what you have there. Which would you like to exchange?");
-	console.log("I\'d like to exchange my ");
+		says("I have some chocolates I\'d like to exchange if I could.");
+		says("Let's see what you have there. Which would you like to exchange?");
+		says("I\'d like to exchange my ");
 	
-	var handleData = function (json){
+		var handleData = function (json){
 		for (var i=0; i < json.myChocolateTypes.length; i++){
 			var types = json.myChocolateTypes[i];
 		console.log(types.choc1 + ", " + types.choc2 + ", " + types.choc3);
-			};
 		};
+	};
 			handleData(json1);
 			
 		console.log("for");
@@ -74,16 +83,30 @@ var totalAmount = 80
 				handleData2(json2);
 				
 //Exchange and purchases//
-	console.log("I\'d also like to purchase some chocolates as well.");
-	console.log("Feel free to shop and you can exchange these when you check out.");
-	console.log("I want to buy some other types of chocolate.");
-	console.log("I want to get ");
+	says("I\'d also like to purchase some chocolates as well.");
+	says("Feel free to shop and you can exchange these when you check out. Also check out our sales we are having today. They are on the back wall.");
+	says("Thank you, we will. I want to buy some other types of chocolate.");
+	says("I want to get ");
 	console.log(Math.floor(Math.random()*8));
 	console.log(otherTypes.type2);
 	console.log("and ");
 	console.log(Math.floor(Math.random()*19));
 	console.log(otherTypes.type3);	
+
 	
+//return//	
+	var shoppingCart = function (itemName){
+		var cartHold = [];
+		var totalCart = function (items){
+			cartHold.push(items);
+		};
+		return {
+			"name": itemName,
+			"total": cartHold,
+			"cartHold": totalCart
+			};
+		};
+	console.log(shoppingCart);
 	
 //Answering questions on form//
 //boolean//
