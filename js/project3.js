@@ -97,25 +97,7 @@ var place = "The 24 Hour Chocolate Exchange",
 	console.log("and ");
 	console.log(Math.floor(Math.random()*19));
 	console.log(otherTypes.type3);	
-
-// String Return//
-	var haveMoney = function(haveEnough, notEnough){
-		var myMoney;
-			if(haveEnough >= 60) {
-				if (notEnough === false) {
-					console.log("I have enough money to buy all the chocolates.");
-					}else{
-					console.log("Shucks! I don't have enough to buy all of the chocolates.");
-					}
-					}else{ 
-					console.log("I can buy some of the chocolates.");
-			}
-			myMoney = "I have $" + money3 + " to buy all the chocolates.";
-			return myMoney;
-			};
-		var canBuy = haveMoney(90, true);
-			console.log(canBuy);
-				
+	
 //return	
 	/*var shoppingCart = function (itemName){
 		var cartHold = [];
@@ -130,6 +112,25 @@ var place = "The 24 Hour Chocolate Exchange",
 		};
 		console.log("I have 10 chocolates in my cart.");*/	
 	
+
+// String Return//
+	var haveMoney = function(haveEnough, notEnough){
+		var myMoney;
+			if(haveEnough >= 60) {
+				if (notEnough === true) {
+					console.log("I have enough money to buy all the chocolates.");
+					}else{
+					console.log("Shucks! I don't have enough to buy all of the chocolates.");
+					}
+					}else{ 
+					console.log("I can buy some of the chocolates.");
+			}
+			myMoney = "I have $" + money3 + " to buy all the chocolates.";
+			return myMoney;
+			};
+		var canBuy = haveMoney(90, true);
+			console.log(canBuy);
+				
 //Answering questions on form//
 //boolean//
 	console.log("Can you three please feel out these customer inquiry forms?");
