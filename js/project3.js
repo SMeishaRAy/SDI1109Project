@@ -15,7 +15,9 @@ var place = "The Chocolate Exchange",
 	type1: "Orange Revenge",
 	type2: "Russian Blueberry",
 	type3: "Expresso Rage",
-	type4: "Fudge Blast",	
+	type4: "Fudge Blast",
+	
+	form = false,	
 };
 //Start//
 	console.log("Today I was looking through one of my kitchen cabinets and found a variety of different types of chocolates. I remember seeing a commercial on television about a place called " + place + ", and thought what a great idea. With all of the different types of chocolates I have, I could go and exchange them for some chocolates I would actually eat. I called Shanna and told her about my idea and she wanted to go with me.");
@@ -73,6 +75,12 @@ var place = "The Chocolate Exchange",
 	console.log("I want to buy some other types of chocolate.");
 	
 	
-		
+//Answering questions on form//
+	console.log("Can you three please feel out these customer inquiry forms?");
+		if(form = true){
+	console.log("Yes we can.")
+		}else{
+	console.log("I'm sorry, we don't have time. Maybe next time.");
+	};		
 		
 	
