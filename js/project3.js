@@ -112,7 +112,7 @@ var place = "The 24 Hour Chocolate Exchange"
 			myMoney = "I have $" + money2 + " to buy all the chocolates."
 			return myMoney;
 			};
-		var canBuy = haveMoney(80, true);
+		var canBuy = haveMoney(true);
 			console.log(haveMoney);
 				
 //return	
