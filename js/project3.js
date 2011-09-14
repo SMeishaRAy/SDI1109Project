@@ -4,6 +4,7 @@
 //Title: The Chocolate Exchange
 
 //variables
+
 var place = "The Chocolate Exchange",
 	time = 10
 	money2 = 80
@@ -69,6 +70,7 @@ var place = "The Chocolate Exchange",
 	console.log("I\'d also like to purchase some chocolates as well.");
 	console.log("Feel free to shop and you can exchange these when you check out.");
 	console.log("I want to buy some other types of chocolate.");
+	
 	
 		
 		
