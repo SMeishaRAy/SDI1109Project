@@ -12,7 +12,7 @@ var place = "The 24 Hour Chocolate Exchange"
 	says = function(talking){
 		console.log(talking);
 		};
- 
+
  	otherTypes = {
 	type1: "Orange Revenge",
 	type2: "Russian Blueberry",
@@ -20,6 +20,7 @@ var place = "The 24 Hour Chocolate Exchange"
 	type4: "Fudge Blast",
 	type5: "Orange Passion",		
 };
+
 	
 
 //Start//
@@ -45,25 +46,28 @@ var place = "The 24 Hour Chocolate Exchange"
 		
 	console.log("Awesome, let\'s go inside.");
 
-//Method: Procedure - Inside The Chocolate Exchange//	
+
+
+//Method: Procedure - Inside The Chocolate Exchange	
 	var store = {
 		place: "The 24 Hour Chocolate Exchange", //property:string
-		counterLady:"Mary",
 		sales: true, //property:boolean
-		storeOpen: function(){
+		storeOpen: function(counterLady){
 			says("Hello. My name is " + counterLady + ". How may I help you?");
+				if(store.sales == true){
+			says("We have a few sales today.");
+			says("Awesome, we\'ll have to check those out.");
+				}else{
+			says("I\'m sorry we don't have any sales today.");
+			says("Oh shucks.");
+				}
 			}
 		};
-		if(store.sales == true){
-		says("Good morning. We have a few sales today.");
-		says("Awesome, we\'ll have to check those out.")
-				}else{
-		says("I\'m sorry we don't have any sales today.");
-		says("Oh shucks.");
-	};
-		says("I have some chocolates I\'d like to exchange if I could.");
-		says("Let's see what you have there. Which would you like to exchange?");
-		says("I\'d like to exchange my ");
+			store.storeOpen("Mary");
+			
+			says("I have some chocolates I\'d like to exchange if I could.");
+			says("Let's see what you have there. Which would you like to exchange?");
+			says("I\'d like to exchange my ");
 	
 		var handleData = function (json){
 		for (var i=0; i < json.myChocolateTypes.length; i++){
@@ -83,19 +87,36 @@ var place = "The 24 Hour Chocolate Exchange"
 				handleData2(json2);
 				
 //Exchange and purchases//
-	says("I\'d also like to purchase some chocolates as well.");
-	says("Feel free to shop and you can exchange these when you check out. Also check out our sales we are having today. They are on the back wall.");
-	says("Thank you, we will. I want to buy some other types of chocolate.");
-	says("I want to get ");
+		says("I\'d also like to purchase some chocolates as well.");
+		says("Feel free to shop and you can exchange these when you check out. Also check out our sales we are having today. They are on the back wall.");
+		says("Thank you, we will. I want to buy some other types of chocolate.");
+		says("I want to get ");
 	console.log(Math.floor(Math.random()*8));
 	console.log(otherTypes.type2);
 	console.log("and ");
 	console.log(Math.floor(Math.random()*19));
 	console.log(otherTypes.type3);	
 
-	
-//return//	
-	var shoppingCart = function (itemName){
+// return//
+	var haveMoney = function(haveEnough, notEnough){
+		var myMoney;
+			if(haveEnough >= 80) {
+				if (notEnough === false) {
+					console.log("I have enough money to buy all the chocolates.");
+					}else{
+					console.log("Shucks! I don't have enough to buy all of the chocolates.");
+					}
+					}else{ 
+					console.log("I can buy some of the chocolates.");
+			}
+			myMoney = "I have $" + money2 + " to buy all the chocolates."
+			return myMoney;
+			};
+		var canBuy = haveMoney(80, true);
+			console.log(haveMoney);
+				
+//return	
+	/*var shoppingCart = function (itemName){
 		var cartHold = [];
 		var totalCart = function (items){
 			cartHold.push(items);
@@ -104,9 +125,9 @@ var place = "The 24 Hour Chocolate Exchange"
 			"name": itemName,
 			"total": cartHold,
 			"cartHold": totalCart
-			};
+			};		
 		};
-	console.log(shoppingCart);
+		console.log("I have 10 chocolates in my cart.");*/	
 	
 //Answering questions on form//
 //boolean//
