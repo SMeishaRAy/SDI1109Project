@@ -6,21 +6,12 @@
 //variables
 
 var place = "The Chocolate Exchange",
-	time = 10
-	money2 = 80
-	cabRide = 75
+	time = 10,
+	money2 = 80,
+	cabRide = 75,
 	counterLady = "Mary",
- 	myChocolateTypes = { 
-	choc1: "milk chocolate", 
-	choc2: "white chocolate",
-	choc3: "bitter-sweet chocolate",
-};
- 	exchangeFor = {
-	milkChoc: "Dark Chocolates", 
-	whiteChoc: "Gianduja Chocolates",
-	bitterChoc: "Gourmet Chocolates",
-};
-	otherTypes = {
+ 
+ 	otherTypes = {
 	type1: "Orange Revenge",
 	type2: "Russian Blueberry",
 	type3: "Expresso Rage",
@@ -58,13 +49,23 @@ var place = "The Chocolate Exchange",
 	console.log("I'd like to exchange these chocolates if I could.");
 	console.log("Let's see what you have there. Which would you like to exchange?");
 	console.log("I\'d like to exchange my ");
-		for(var key in myChocolateTypes){
-			console.log(myChocolateTypes[key]);
+	
+	var handleData = function (json){
+		for (var i=0; i < json.myChocolateTypes.length; i++){
+			var types = json.myChocolateTypes[i];
+		console.log(types.choc1 + ", " + types.choc2 + ", " + types.choc3);
 			};
-		console.log("for");	
-			for(var key in exchangeFor){
-				console.log(exchangeFor[key]);
+		};
+			handleData(json1);
+			
+		console.log("for");
+	var handleData2 = function(json){
+		for(var e=0; e <  json.exchangeFor.length; e++){
+			var types1 = json.exchangeFor[e];
+				console.log(types1.milkChoc + ", " + types1.whiteChoc + ", " + types1.bitterChoc);
 				};
+			};
+				handleData2(json2);
 				
 //Exchange and purchases//
 	console.log("I\'d also like to purchase some chocolates as well.");
