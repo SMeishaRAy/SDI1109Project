@@ -1,12 +1,10 @@
-{
-	"friends": [
-		{
-			"UUID": 0015692,
-			"name": "Meisha"
-		},
-		{
-			"UUID": 0118245,
-			"name": "Shanna"
-		}
-	]
+var json1={
+ 	"myChocolateTypes":[ 
+ {
+	"choc1": "milk chocolate", 
+	"choc2": "white chocolate",
+	"choc3": "bitter-sweet chocolate",
+
 }
+]
+};
