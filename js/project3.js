@@ -5,9 +5,10 @@
 
 //variables
 
-var place = "The 24 Hour Chocolate Exchange"
+var place = "The 24 Hour Chocolate Exchange",
 	form = true,
 	money2 = 80,
+	money3 = 90,
 	cabRide = 75,
 	says = function(talking){
 		console.log(talking);
@@ -97,10 +98,10 @@ var place = "The 24 Hour Chocolate Exchange"
 	console.log(Math.floor(Math.random()*19));
 	console.log(otherTypes.type3);	
 
-// return//
+// String Return//
 	var haveMoney = function(haveEnough, notEnough){
 		var myMoney;
-			if(haveEnough >= 80) {
+			if(haveEnough >= 60) {
 				if (notEnough === false) {
 					console.log("I have enough money to buy all the chocolates.");
 					}else{
@@ -109,11 +110,11 @@ var place = "The 24 Hour Chocolate Exchange"
 					}else{ 
 					console.log("I can buy some of the chocolates.");
 			}
-			myMoney = "I have $" + money2 + " to buy all the chocolates."
+			myMoney = "I have $" + money3 + " to buy all the chocolates.";
 			return myMoney;
 			};
-		var canBuy = haveMoney(true);
-			console.log(haveMoney);
+		var canBuy = haveMoney(90, true);
+			console.log(canBuy);
 				
 //return	
 	/*var shoppingCart = function (itemName){
