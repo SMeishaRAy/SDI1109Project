@@ -131,26 +131,16 @@ var place = "The 24 Hour Chocolate Exchange",
 		 
 //Return: Object//
 //Property: Object//
-	says("On my wish list I have")
-	var yummy = {
-		rainbowChocos: 8,
-		cherryChocos: 2,
-		haloTreats: 10,
-		myWishList: function() {
-		return {"wish1": yummy.rainbowChocos, "wish2": yummy.cherryChocos, "wish3": yummy.haloTreats};t
-		}
-	}
-		var myWishes = myWishList();
-	console.log(myWishes.wish1 + " Rainbow Chocos " + myWishes.wish2 + ", Cherry Chocos, and " + myWishes.wish3 + " Halo Treats.");
 	
-	/*function myWishList() {
+	says("On my wish list I have");	
+	function myWishList() {
 		var rainbowChocos = 8;
 		var cherryChocos = 2;
 		var haloTreats = 10;
 			return {"wish1": rainbowChocos, "wish2": cherryChocos, "wish3": haloTreats};t
 	}
 		var myWishes = myWishList();
-		console.log(myWishes.wish1 + " Rainbow Chocos " +  myWishes.wish2 + ", Cherry Chocos, and " + myWishes.wish3 + " Halo Treats."); 	*/
+		console.log(myWishes.wish1 + " Rainbow Chocos " +  myWishes.wish2 + ", Cherry Chocos, and " + myWishes.wish3 + " Halo Treats."); 	
 	
 			
 // Return: String //
@@ -159,6 +149,7 @@ var place = "The 24 Hour Chocolate Exchange",
 //Return: Number//
 //Return: Boolean//
 //Argument: Number//
+
 	var haveMoney = function(haveEnough, notEnough){
 		var myMoney;
 			if(haveEnough >= 60) {
@@ -200,11 +191,17 @@ var place = "The 24 Hour Chocolate Exchange",
 					handleData3(json3);
 						
 	says("Thank you very much Ladies. Come back and see us. Have a great day.");
-
-	
+	says("Meisha. Crystal and I are going to go shopping at the mall, would you like to go?");
+		if (mall = false){
+		says("Sure I\'d love to go.")
+		}else{
+			says("No, I'm going to head home. I'll call you later.");
+		};
+		
 //Left the store//
+//Method:Mutator//
 	says("Taxi!");
-	says("Where to Ladies?");
+	says("Where to?");
 	says("55th and Broadway please.");
 	says("A SHORT DRIVE LATER.");
 	says("$" + taxiCabRide + " please.");
