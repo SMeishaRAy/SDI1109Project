@@ -31,28 +31,27 @@ var place = "The 24 Hour Chocolate Exchange",
 //Arrival at The Chocolate Exchange//
 //Property:Number//	
 //Accessor//	
-
-	console.log("How much do we owe you?");
-	console.log("$75.00 please."); 
-		var taxiCabRide = 75,
-			numberInCab = 3,
-			getTaxiCabRide = function(taxiCabRide, numberInCab){
-			if(numberInCab === 2 ){
-			taxiCabRide = 37.50;
-			}else if (numberInCab >= 3){
-			taxiCabRide = 25;
-			}else if (numberInCab === 1)			
-			taxiCabRide = 75;
-
-			return taxiCabRide / numberInCab;
+		console.log("How much do we owe you?");
+		console.log("$75.00 please.");
+			var taxiCabRide = 75,
+				numberInCab = 3,
+				getTaxiCabRide = function(){
+					if(numberInCab === 2 ){
+				taxiCabRide = 37.50;
+					}else if (numberInCab >= 3){
+				taxiCabRide = 25;
+					}else if (numberInCab === 1){
+				taxiCabRide = 75;
 			}
-	}
+				return taxiCabRide / numberInCab;
+	};
+
 			getTaxiCabRide();
-			
-			console.log("We each owe $" + taxiCabRide + " to the cab driver.");
-			console.log("Here you go, $80.00");
-			console.log("Thank you. Here is your change.");
-	
+
+		console.log("We each owe $" + taxiCabRide + " to the cab driver.");
+		console.log("Here you go, $80.00");
+		says("Thank you. Here is your change.");	
+		
 //while-loop//	
 		while(money2 > cabRide){
 		console.log(money2 - cabRide);
@@ -60,7 +59,7 @@ var place = "The 24 Hour Chocolate Exchange",
 		};
 			getTaxiCabRide();
 		
-	console.log("Awesome, let\'s go inside.");
+	says("Awesome, let\'s go inside.");
 
 //Method: Procedure - Inside The Chocolate Exchange	
 //Argument: Object//
@@ -96,7 +95,7 @@ var place = "The 24 Hour Chocolate Exchange",
 			handleData(json1);
 			
 		console.log("for");
-	var handleData2 = function(json){
+		var handleData2 = function(json){
 //Nested for-loop//
 		for(var e=0; e <  json.exchangeFor.length; e++){
 			var types1 = json.exchangeFor[e];
@@ -105,7 +104,6 @@ var place = "The 24 Hour Chocolate Exchange",
 			};
 				handleData2(json2);
 				
-//Exchange and purchases//
 		says("I\'d also like to purchase some chocolates as well.");
 		says("Feel free to shop and you can exchange these when you check out. Also check out our sales we are having today. They are on the back wall.");
 		says("Thank you, we will. I want to buy some other types of chocolate.");
@@ -133,7 +131,7 @@ var place = "The 24 Hour Chocolate Exchange",
 		 
 //Return: Object//
 //Property: Object//
-	console.log("On my wish list I have")
+	says("On my wish list I have")
 	var yummy = {
 		rainbowChocos: 8,
 		cherryChocos: 2,
@@ -179,17 +177,17 @@ var place = "The 24 Hour Chocolate Exchange",
 			console.log(canBuy);
 				
 // Conditional - Answering questions on form//
-	console.log("Can you three please feel out these customer inquiry forms?");
+	says("Can you three please feel out these customer inquiry forms?");
 			if(form = true){
-		console.log("Yes we can.")
+		says("Yes we can.")
 		}else{
-			console.log("I'm sorry, we don't have time. Maybe next time.");
+			says("I'm sorry, we don't have time. Maybe next time.");
 	};		
 		
-	console.log("Here you go. Just fill in the info there.");
+	says("Here you go. Just fill in the info there.");
 	
 //Returns today's date// 
- 	console.log("What's is today's date?");
+ 	says("What's is today's date?");
  		var date = new Date();
 		console.log(date);
 //for-loop//		
@@ -201,15 +199,15 @@ var place = "The 24 Hour Chocolate Exchange",
 				};
 					handleData3(json3);
 						
-	console.log("Thank you very much Ladies. Come back and see us. Have a great day.");
+	says("Thank you very much Ladies. Come back and see us. Have a great day.");
 
 	
 //Left the store//
-	console.log("Taxi!");
-	console.log("Where to Ladies?");
-	console.log("55th and Broadway please.");
-	console.log("A SHORT DRIVE LATER.");
-	console.log("$" + taxiCabRide + " please.");
+	says("Taxi!");
+	says("Where to Ladies?");
+	says("55th and Broadway please.");
+	says("A SHORT DRIVE LATER.");
+	says("$" + taxiCabRide + " please.");
 	
 	console.log("THE END");
 	
