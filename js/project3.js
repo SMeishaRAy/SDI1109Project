@@ -12,7 +12,7 @@ var place = "The 24 Hour Chocolate Exchange",
 	cabRide = 75,
 	says = function(talking){
 		console.log(talking);
-		};
+};
 
  	otherTypes = {
 	type1: "Orange Revenge",
@@ -97,7 +97,29 @@ var place = "The 24 Hour Chocolate Exchange",
 	console.log("and ");
 	console.log(Math.floor(Math.random()*19));
 	console.log(otherTypes.type3);	
-	
+
+
+//Return Array//
+	console.log("I have in my cart ")
+	function addToCart() {
+		var peppermint = 5;
+		var coconut = 3;
+			return [peppermint, coconut];
+	}
+		var chocolate2 = addToCart();
+	console.log(chocolate2[0] + " peppermint chocos and "  +  chocolate2[1] + " coconut chocos" ); 
+		
+//object return//
+	console.log("On my wish list I want ")
+	function myWishList() {
+		var rainbowChocos = 8;
+		var cherryChocos = 2;
+		var haloTreats = 10;
+			return {"wish1": rainbowChocos, "wish2": cherryChocos, "wish3": haloTreats};
+	}
+		var myWishes = myWishList();
+		console.log(myWishes.wish1 + " Rainbow Chocos " +  myWishes.wish2 + ", Cherry Chocos, and " + myWishes.wish3 + " Halo Treats."); 	
+
 //return	
 	/*var shoppingCart = function (itemName){
 		var cartHold = [];
@@ -147,8 +169,10 @@ var place = "The 24 Hour Chocolate Exchange",
 					console.log(info.name + ", " + info.age + ", " + info.phone);
 					};
 				};
-					handleData3(json3);	
+					handleData3(json3);
+						
 	console.log("Thank you very much Ladies. Come back and see us. Have a great day.");
+
 	
 //Left the store//
 	console.log("Taxi!");
