@@ -29,10 +29,25 @@ var place = "The 24 Hour Chocolate Exchange",
 
 	
 //Arrival at The Chocolate Exchange//
-		var getTaxiCabRide = function(){
-		var taxiCabRide = 75/3	//Property:Number//		
-		console.log("How much do we owe you?");
-			console.log("$75.00 please."); 
+//Property:Number//	
+//Mutator & Accessor//	
+
+	console.log("How much do we owe you?");
+	console.log("$75.00 please."); 
+		var taxiCabRide = 75,
+			numberInCab = 3,
+			getTaxiCabRide = function(taxiCabRide, numberInCab){
+			if(numberInCab > 2 !== 3 ){
+			taxiCabRide = 37.50;
+			}else if (numberInCab > 3){
+			taxiCabRide = 25;
+			}else {
+			taxiCabRide = 75;
+		} 
+			return a/b;
+	}
+			getTaxiCabRide();
+			
 			console.log("We each owe $" + taxiCabRide + " to the cab driver.");
 			console.log("Here you go, $80.00");
 			console.log("Thank you. Here is your change.");
@@ -41,7 +56,6 @@ var place = "The 24 Hour Chocolate Exchange",
 		while(money2 > cabRide){
 		console.log(money2 - cabRide);
 		money2--;
-		}
 		};
 			getTaxiCabRide();
 		
