@@ -34,7 +34,7 @@ var place = "The 24 Hour Chocolate Exchange",
 
 	console.log("How much do we owe you?");
 	console.log("$75.00 please."); 
-		var taxiCabRide = 75,
+		/*var taxiCabRide = 75,
 			numberInCab = 3,
 			getTaxiCabRide = function(taxiCabRide, numberInCab){
 			if(numberInCab > 2 !== 3 ){
@@ -57,7 +57,7 @@ var place = "The 24 Hour Chocolate Exchange",
 		console.log(money2 - cabRide);
 		money2--;
 		};
-			getTaxiCabRide();
+			getTaxiCabRide();*/
 		
 	console.log("Awesome, let\'s go inside.");
 
@@ -133,14 +133,26 @@ var place = "The 24 Hour Chocolate Exchange",
 //Return: Object//
 //Property: Object//
 	console.log("On my wish list I have")
-	function myWishList() {
+	var yummy = {
+		rainbowChocos: 8,
+		cherryChocos: 2,
+		haloTreats: 10,
+		myWishList: function() {
+		return {"wish1": yummy.rainbowChocos, "wish2": yummy.cherryChocos, "wish3": yummy.haloTreats};t
+		}
+	}
+		var myWishes = myWishList();
+
+	console.log(myWishes.wish1 + " Rainbow Chocos " + myWishes.wish2 + ", Cherry Chocos, and " + myWishes.wish3 + " Halo Treats.");
+	
+	/*function myWishList() {
 		var rainbowChocos = 8;
 		var cherryChocos = 2;
 		var haloTreats = 10;
 			return {"wish1": rainbowChocos, "wish2": cherryChocos, "wish3": haloTreats};t
 	}
 		var myWishes = myWishList();
-		console.log(myWishes.wish1 + " Rainbow Chocos " +  myWishes.wish2 + ", Cherry Chocos, and " + myWishes.wish3 + " Halo Treats."); 	
+		console.log(myWishes.wish1 + " Rainbow Chocos " +  myWishes.wish2 + ", Cherry Chocos, and " + myWishes.wish3 + " Halo Treats."); 	*/
 
 //Mutator & Accessor//
 	console.log("You have some money in your account, if you\'d like to use that towards your purchase today. You may also deposit some money in your account if you choose.");
