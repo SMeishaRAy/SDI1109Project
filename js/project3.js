@@ -41,14 +41,12 @@ var place = "The 24 Hour Chocolate Exchange",
 			taxiCabRide = 37.50;
 			}else if (numberInCab >= 3){
 			taxiCabRide = 25;
-			{
+			}else if (numberInCab === 1)			
 			taxiCabRide = 75;
-			}else if (numberInCab === 1)
-			}	
-		} 
+
 			return taxiCabRide / numberInCab;
+			}
 	}
-	
 			getTaxiCabRide();
 			
 			console.log("We each owe $" + taxiCabRide + " to the cab driver.");
