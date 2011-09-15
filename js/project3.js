@@ -47,8 +47,6 @@ var place = "The 24 Hour Chocolate Exchange",
 		
 	console.log("Awesome, let\'s go inside.");
 
-
-
 //Method: Procedure - Inside The Chocolate Exchange	
 	var store = {
 		place: "The 24 Hour Chocolate Exchange", //property:string
@@ -98,7 +96,6 @@ var place = "The 24 Hour Chocolate Exchange",
 	console.log(Math.floor(Math.random()*19));
 	console.log(otherTypes.type3);	
 
-
 //Return Array//
 	console.log("I have in my cart ")
 	function addToCart() {
@@ -120,20 +117,6 @@ var place = "The 24 Hour Chocolate Exchange",
 		var myWishes = myWishList();
 		console.log(myWishes.wish1 + " Rainbow Chocos " +  myWishes.wish2 + ", Cherry Chocos, and " + myWishes.wish3 + " Halo Treats."); 	
 
-//return	
-	/*var shoppingCart = function (itemName){
-		var cartHold = [];
-		var totalCart = function (items){
-			cartHold.push(items);
-		};
-		return {
-			"name": itemName,
-			"total": cartHold,
-			"cartHold": totalCart
-			};		
-		};
-		console.log("I have 10 chocolates in my cart.");*/	
-	
 
 // String Return//
 	var haveMoney = function(haveEnough, notEnough){
@@ -144,7 +127,7 @@ var place = "The 24 Hour Chocolate Exchange",
 					}else{
 					console.log("Shucks! I don't have enough to buy all of the chocolates.");
 					}
-					}else{ 
+					}else{ //nested conditional
 					console.log("I can buy some of the chocolates.");
 			}
 			myMoney = "I have $" + money3 + " to buy all the chocolates.";
@@ -153,8 +136,8 @@ var place = "The 24 Hour Chocolate Exchange",
 		var canBuy = haveMoney(90, true);
 			console.log(canBuy);
 				
-//Answering questions on form//
-//boolean//
+// Conditional - Answering questions on form//
+
 	console.log("Can you three please feel out these customer inquiry forms?");
 			if(form = true){
 		console.log("Yes we can.")
@@ -177,5 +160,17 @@ var place = "The 24 Hour Chocolate Exchange",
 //Left the store//
 	console.log("Taxi!");
 	console.log("THE END");
-		
+	
+//Method Mutator//
+	function Student(name) {
+  var name_ = name;
+ 
+  this.getName = function() {
+    return name_;
+  }
+ 
+  this.setName = function(name) {
+    name_ = name;
+  }
+}		
 	
