@@ -30,7 +30,7 @@ var place = "The 24 Hour Chocolate Exchange",
 	
 //Arrival at The Chocolate Exchange//
 		var getTaxiCabRide = function(){
-		var taxiCabRide = 75/3			
+		var taxiCabRide = 75/3	//Property:Number//		
 		console.log("How much do we owe you?");
 			console.log("$75.00 please."); 
 			console.log("We each owe $" + taxiCabRide + " to the cab driver.");
@@ -48,9 +48,13 @@ var place = "The 24 Hour Chocolate Exchange",
 	console.log("Awesome, let\'s go inside.");
 
 //Method: Procedure - Inside The Chocolate Exchange	
-	var store = {
-		place: "The 24 Hour Chocolate Exchange", //property:string
-		sales: true, //property:boolean
+//Argument: Object//
+//method: function//
+//Property:String//
+//Property:Boolean//
+		var store = {
+		place: "The 24 Hour Chocolate Exchange", 
+		sales: true, 
 		storeOpen: function(counterLady){
 			says("Hello. My name is " + counterLady + ". How may I help you?");
 				if(store.sales == true){
@@ -78,6 +82,7 @@ var place = "The 24 Hour Chocolate Exchange",
 			
 		console.log("for");
 	var handleData2 = function(json){
+//Nested for-loop//
 		for(var e=0; e <  json.exchangeFor.length; e++){
 			var types1 = json.exchangeFor[e];
 				console.log(types1.milkChoc + ", " + types1.whiteChoc + ", " + types1.bitterChoc);
@@ -98,28 +103,27 @@ var place = "The 24 Hour Chocolate Exchange",
 	console.log(Math.floor(Math.random()*19));
 	console.log(otherTypes.type3);	
 
-//Method//
-
-//Return Array//
+//Return: Array//
+//Property: Array//
+//Argument: Array//
 	console.log("I have in my cart ")
 	function addToCart() {
 		var peppermint = 5;
 		var coconut = 3;
 		var blueChocos = 7;
-			return [peppermint, coconut, blueChocos];//array
-	}
+			return [peppermint, coconut, blueChocos];		
+		}
 		var chocolate2 = addToCart();
 	console.log(chocolate2[0] + " peppermint chocos and "  +  chocolate2[1] + " coconut chocos " + chocolate2[2] + " Blue Chocos.");
-	
-			
-	 
-//object return//
+		 
+//Return: Object//
+//Property: Object//
 	console.log("On my wish list I have")
 	function myWishList() {
 		var rainbowChocos = 8;
 		var cherryChocos = 2;
 		var haloTreats = 10;
-			return {"wish1": rainbowChocos, "wish2": cherryChocos, "wish3": haloTreats};
+			return {"wish1": rainbowChocos, "wish2": cherryChocos, "wish3": haloTreats};t
 	}
 		var myWishes = myWishList();
 		console.log(myWishes.wish1 + " Rainbow Chocos " +  myWishes.wish2 + ", Cherry Chocos, and " + myWishes.wish3 + " Halo Treats."); 	
@@ -127,20 +131,13 @@ var place = "The 24 Hour Chocolate Exchange",
 //Mutator & Accessor//
 	console.log("You have some money in your account, if you\'d like to use that towards your purchase today. You may also deposit some money in your account if you choose.");
 	
-	var	clubAccount;{
-		double balance;
-		double getBalance(){
-					return balance;
-		}
-			 void setBalance(double newBalance){
-				balance = newBalance;
-	}
-		void deposit(double amount){
-		balance = balance + amount;
-		}
-	}
-		
-// String Return//
+			
+// Return: String //
+//Argument: Boolean//
+//Nested Conditional//
+//Return: Number//
+//Return: Boolean//
+//Argument: Number//
 	var haveMoney = function(haveEnough, notEnough){
 		var myMoney;
 			if(haveEnough >= 60) {
@@ -149,7 +146,7 @@ var place = "The 24 Hour Chocolate Exchange",
 					}else{
 					console.log("Shucks! I don't have enough to buy all of the chocolates.");
 					}
-					}else{ //nested conditional
+					}else{ 
 					console.log("I can buy some of the chocolates.");
 			}
 			myMoney = "I have $" + money3 + " to buy all the chocolates.";
@@ -159,7 +156,6 @@ var place = "The 24 Hour Chocolate Exchange",
 			console.log(canBuy);
 				
 // Conditional - Answering questions on form//
-
 	console.log("Can you three please feel out these customer inquiry forms?");
 			if(form = true){
 		console.log("Yes we can.")
@@ -173,7 +169,7 @@ var place = "The 24 Hour Chocolate Exchange",
  	console.log("What's is today's date?");
  		var date = new Date();
 		console.log(date);
-		
+//for-loop//		
 		var handleData3 = function(json){
 			for(var f=0; f < json.myForm.length; f++){
 				var info = json.myForm[f];
