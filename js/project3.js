@@ -30,22 +30,25 @@ var place = "The 24 Hour Chocolate Exchange",
 	
 //Arrival at The Chocolate Exchange//
 //Property:Number//	
-//Mutator & Accessor//	
+//Accessor//	
 
 	console.log("How much do we owe you?");
 	console.log("$75.00 please."); 
-		/*var taxiCabRide = 75,
+		var taxiCabRide = 75,
 			numberInCab = 3,
 			getTaxiCabRide = function(taxiCabRide, numberInCab){
-			if(numberInCab > 2 !== 3 ){
+			if(numberInCab === 2 ){
 			taxiCabRide = 37.50;
-			}else if (numberInCab > 3){
+			}else if (numberInCab >= 3){
 			taxiCabRide = 25;
-			}else {
+			{
 			taxiCabRide = 75;
+			}else if (numberInCab === 1)
+			}	
 		} 
-			return a/b;
+			return taxiCabRide / numberInCab;
 	}
+	
 			getTaxiCabRide();
 			
 			console.log("We each owe $" + taxiCabRide + " to the cab driver.");
@@ -57,7 +60,7 @@ var place = "The 24 Hour Chocolate Exchange",
 		console.log(money2 - cabRide);
 		money2--;
 		};
-			getTaxiCabRide();*/
+			getTaxiCabRide();
 		
 	console.log("Awesome, let\'s go inside.");
 
@@ -142,7 +145,6 @@ var place = "The 24 Hour Chocolate Exchange",
 		}
 	}
 		var myWishes = myWishList();
-
 	console.log(myWishes.wish1 + " Rainbow Chocos " + myWishes.wish2 + ", Cherry Chocos, and " + myWishes.wish3 + " Halo Treats.");
 	
 	/*function myWishList() {
@@ -153,9 +155,6 @@ var place = "The 24 Hour Chocolate Exchange",
 	}
 		var myWishes = myWishList();
 		console.log(myWishes.wish1 + " Rainbow Chocos " +  myWishes.wish2 + ", Cherry Chocos, and " + myWishes.wish3 + " Halo Treats."); 	*/
-
-//Mutator & Accessor//
-	console.log("You have some money in your account, if you\'d like to use that towards your purchase today. You may also deposit some money in your account if you choose.");
 	
 			
 // Return: String //
@@ -209,5 +208,10 @@ var place = "The 24 Hour Chocolate Exchange",
 	
 //Left the store//
 	console.log("Taxi!");
+	console.log("Where to Ladies?");
+	console.log("55th and Broadway please.");
+	console.log("A SHORT DRIVE LATER.");
+	console.log("$" + taxiCabRide + " please.");
+	
 	console.log("THE END");
 	
