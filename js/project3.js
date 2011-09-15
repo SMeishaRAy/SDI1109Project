@@ -13,7 +13,7 @@ var place = "The 24 Hour Chocolate Exchange",
 	says = function(talking){
 		console.log(talking);
 };
-
+ 
  	otherTypes = {
 	type1: "Orange Revenge",
 	type2: "Russian Blueberry",
@@ -90,24 +90,31 @@ var place = "The 24 Hour Chocolate Exchange",
 		says("Feel free to shop and you can exchange these when you check out. Also check out our sales we are having today. They are on the back wall.");
 		says("Thank you, we will. I want to buy some other types of chocolate.");
 		says("I want to get ");
+		
+//Math//
 	console.log(Math.floor(Math.random()*8));
 	console.log(otherTypes.type2);
 	console.log("and ");
 	console.log(Math.floor(Math.random()*19));
 	console.log(otherTypes.type3);	
 
+//Method//
+
 //Return Array//
 	console.log("I have in my cart ")
 	function addToCart() {
 		var peppermint = 5;
 		var coconut = 3;
-			return [peppermint, coconut];
+		var blueChocos = 7;
+			return [peppermint, coconut, blueChocos];//array
 	}
 		var chocolate2 = addToCart();
-	console.log(chocolate2[0] + " peppermint chocos and "  +  chocolate2[1] + " coconut chocos" ); 
-		
+	console.log(chocolate2[0] + " peppermint chocos and "  +  chocolate2[1] + " coconut chocos " + chocolate2[2] + " Blue Chocos.");
+	
+			
+	 
 //object return//
-	console.log("On my wish list I want ")
+	console.log("On my wish list I have")
 	function myWishList() {
 		var rainbowChocos = 8;
 		var cherryChocos = 2;
@@ -117,7 +124,22 @@ var place = "The 24 Hour Chocolate Exchange",
 		var myWishes = myWishList();
 		console.log(myWishes.wish1 + " Rainbow Chocos " +  myWishes.wish2 + ", Cherry Chocos, and " + myWishes.wish3 + " Halo Treats."); 	
 
-
+//Mutator & Accessor//
+	console.log("You have some money in your account, if you\'d like to use that towards your purchase today. You may also deposit some money in your account if you choose.");
+	
+	var	clubAccount;{
+		double balance;
+		double getBalance(){
+					return balance;
+		}
+			 void setBalance(double newBalance){
+				balance = newBalance;
+	}
+		void deposit(double amount){
+		balance = balance + amount;
+		}
+	}
+		
 // String Return//
 	var haveMoney = function(haveEnough, notEnough){
 		var myMoney;
@@ -143,9 +165,15 @@ var place = "The 24 Hour Chocolate Exchange",
 		console.log("Yes we can.")
 		}else{
 			console.log("I'm sorry, we don't have time. Maybe next time.");
-	};	
-
+	};		
+		
 	console.log("Here you go. Just fill in the info there.");
+	
+//Returns today's date// 
+ 	console.log("What's is today's date?");
+ 		var date = new Date();
+		console.log(date);
+		
 		var handleData3 = function(json){
 			for(var f=0; f < json.myForm.length; f++){
 				var info = json.myForm[f];
@@ -160,17 +188,4 @@ var place = "The 24 Hour Chocolate Exchange",
 //Left the store//
 	console.log("Taxi!");
 	console.log("THE END");
-	
-//Method Mutator//
-	function Student(name) {
-  var name_ = name;
- 
-  this.getName = function() {
-    return name_;
-  }
- 
-  this.setName = function(name) {
-    name_ = name;
-  }
-}		
 	
