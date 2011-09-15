@@ -177,10 +177,11 @@ var place = "The 24 Hour Chocolate Exchange",
 		
 	says("Here you go. Just fill in the info there.");
 	
-//Returns today's date// 
+//Returns today's date - just something fun!// 
  	says("What's is today's date?");
  		var date = new Date();
 		console.log(date);
+		
 //for-loop//		
 		var handleData3 = function(json){
 			for(var f=0; f < json.myForm.length; f++){
@@ -197,6 +198,7 @@ var place = "The 24 Hour Chocolate Exchange",
 		}else{
 			says("No, I'm going to head home. I'll call you later.");
 		};
+	
 		
 //Left the store//
 //Method:Mutator//
@@ -205,6 +207,9 @@ var place = "The 24 Hour Chocolate Exchange",
 	says("55th and Broadway please.");
 	says("A SHORT DRIVE LATER.");
 	says("$" + taxiCabRide + " please.");
+	says("A discount, thank you.");
+	says("Your welcome. Have a nice day.");
+	says("Thank you, you too.");
 	
 	console.log("THE END");
 	
